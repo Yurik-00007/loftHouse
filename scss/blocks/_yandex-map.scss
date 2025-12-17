@@ -1,0 +1,28 @@
+.marker {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute; /* Обязательно для overlay на карте */
+  transform: translate(-50%, -100%); /* Центрирует пин по координатам (нижний конец на точке) */
+  pointer-events: none; /* Опционально: чтобы не мешать кликам на карту */
+  z-index: 15; /* Чтобы выше других элементов */
+}
+
+.marker img {
+  width: 40px;
+  height: 40px;
+  display: block; /* Убирает лишние отступы */
+}
+
+[class*='map-copyrights'] {
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.map:hover [class*='map-copyrights'] {
+  opacity: 1;
+}
+[class*='ymaps3x0--map'] {
+  filter: grayscale(1) sepia(0.1);
+}

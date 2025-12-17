@@ -1,0 +1,26 @@
+.header {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: blue;
+}
+
+.footer h2 {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.project {
+  border: 1px solid #000;
+}
+
+div p {
+  color: red;
+  background-color: #fff;
+}/*# sourceMappingURL=main.css.map */

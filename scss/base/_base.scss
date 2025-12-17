@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@100..900&family=Roboto:wght@300&display=swap');
+
+
+body {
+  font-family: $font-main;
+  background-color: $dark;
+  color: $white;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &--sm {
+    max-width: 839px;
+  }
+}
+
+
+a {
+  color: $white;
+  transition: color .2ms ease-in;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.none {
+  display: none !important;
+}
+
+.visually-hidden {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+
+  position: absolute;
+
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+
+  white-space: nowrap;
+}
+
+.title-2 {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 36px;
+  color: $accent;
+
+  @include mediaTablet {
+    font-size: 28px;
+  }
+
+}
+
+.input {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  font: inherit;
+  color: inherit;
+
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.link-bolt {
+  color: $accent;
+  font-weight: 700;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}

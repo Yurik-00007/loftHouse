@@ -1,0 +1,102 @@
+/*
+.nav-icon-btn {
+  //display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 24px;
+  position: relative;
+  //z-index: 2;
+
+}
+
+.nav-icon-btn::before,
+.nav-icon-btn::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  height: 2px;
+  left: 0;
+  right: 0;
+}
+
+.nav-icon-btn::before {
+  top: 0;
+}
+
+.nav-icon-btn::after {
+  bottom: 0;
+}
+
+.nav-icon-btn span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+}*/
+
+/* Nav Icon */
+.nav-icon-btn {
+	--time: 0.1s;
+	--width: 40px;
+	--height: 30px;
+	--line-height: 1px;
+    --line-margin: 2;
+	--color: #fff;
+
+	height: var(--height);
+	width: var(--width);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-icon {
+	position: relative;
+	width: var(--width);
+	height: var(--line-height);
+	background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+	content: '';
+	display: block;
+
+	position: absolute;
+	left: 0;
+
+	width: var(--width);
+	height: var(--line-height);
+
+	background-color: var(--color);
+	transition: transform var(--time) ease-in,
+		top var(--time) linear var(--time);
+}
+
+.nav-icon::before {
+	top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+	top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon--active {
+	background-color: transparent;
+}
+
+.nav-icon.nav-icon--active::before,
+.nav-icon.nav-icon--active::after {
+	top: 0;
+	transition: top var(--time) linear,
+		transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon--active::before {
+	transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon--active::after {
+	transform: rotate(-45deg);
+}
